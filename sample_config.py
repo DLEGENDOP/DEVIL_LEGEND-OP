@@ -166,7 +166,7 @@ class Config(object):
     BOTLOG = False
     BOTLOG_CHATID = 0
     # External plugins repo
-    EXTERNAL_REPO = os.environ.get("EXTERNAL_REPO", False)
+    EXTERNAL_REPO = os.environ.get("EXTERNAL_REPO", false)
     if bool(EXTERNAL_REPO and (EXTERNAL_REPO.lower() != "false")):
         if not url(EXTERNAL_REPO):
             EXTERNAL_REPO = "https://github.com/Tecosys/PLUGINS"
@@ -174,7 +174,7 @@ class Config(object):
         EXTERNAL_REPO = None
     EXTERNAL_REPOBRANCH = os.environ.get("EXTERNAL_REPOBRANCH", "main")
     # for vc plugins
-    VCMODE = os.environ.get("VCMODE", False)
+    VCMODE = os.environ.get("VCMODE", false)
     VCMODE = bool(VCMODE and (VCMODE.lower() != "false"))
     VC_SESSION = os.environ.get("VC_SESSION", None)
     VC_REPO = os.environ.get("VC_REPO", "https://github.com/Tecosys/VCPLAYER")
