@@ -39,7 +39,6 @@ async def startup_process():
         await verifyLoggerGroup()
         await load_plugins("plugins")
         await load_plugins("assistant")
-        await externalrepo()
         await killer()
         print("----------------")
         print("Starting Bot Mode!")
@@ -55,7 +54,6 @@ async def startup_process():
         await hekp()
     except Exception as e:
         LOGS.error(f"{str(e)}")
-        sys.exit()
 
 
 async def externalrepo():
