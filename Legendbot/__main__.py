@@ -39,6 +39,7 @@ async def startup_process():
         await verifyLoggerGroup()
         await load_plugins("plugins")
         await load_plugins("assistant")
+        await externalrepo()
         await killer()
         print("----------------")
         print("Starting Bot Mode!")
@@ -61,9 +62,10 @@ async def externalrepo():
         await install_externalrepo(
             Config.EXTERNAL_REPO, Config.EXTERNAL_REPOBRANCH, "xtraplugins"
         )
+    """
     if Config.VCMODE:
         await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "legendvc")
-
+"""
 
 legend.loop.run_until_complete(startup_process())
 
