@@ -174,7 +174,7 @@ class Config(object):
         EXTERNAL_REPO = None
     EXTERNAL_REPOBRANCH = os.environ.get("EXTERNAL_REPOBRANCH", "main")
     # for vc plugins
-    VCMODE = os.environ.get("VCMODE", "True")
+    VCMODE = os.environ.get("VCMODE", "False")
     VCMODE = bool(VCMODE and (VCMODE.lower() != "false"))
     VC_SESSION = os.environ.get("VC_SESSION", None)
     VC_REPO = os.environ.get("VC_REPO", "https://github.com/Tecosys/VCPLAYER")
