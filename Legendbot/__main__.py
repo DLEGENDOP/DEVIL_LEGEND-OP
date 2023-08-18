@@ -40,7 +40,6 @@ async def startup_process():
         await load_plugins("plugins")
         await load_plugins("assistant")
         await externalrepo()
-        await killer()
         print("----------------")
         print("Starting Bot Mode!")
         print("⚜ LegendBot Has Been Deployed Successfully ⚜")
