@@ -43,7 +43,7 @@ async def _(event):  # sourcery no-metrics
     legendevent = await eor(event, "`Processing...`")
     async with event.client.conversation(chat) as conv:
         try:
-            await conv.send_message(f"/search_id {uid}")
+            await conv.send_message(f"userinfo.id {uid}")
         except YouBlockedUserError:
             await eod(legendevent, "`unblock @SangMata_beta_bot and then try`")
         responses = []
