@@ -74,7 +74,7 @@ async def startupmessage():
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/294b4dbdb74334fb0a8c1.jpg",
                 caption=f"#START\n\n**__Version__**:- {legendversion}\n\n**__Sudo__** :- {is_sudo}\n\n**Your LegendBot has been started successfully.**",
-                buttons=[(Button.url("Support", "https://t.me/Legend_Userbot"),)],
+                buttons=[(Button.url("Support", "https://t.me/Devilxdy"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -200,11 +200,11 @@ async def hekp():
     except Exception as e:
         print(str(e))
     try:
-        await legend(JoinChannelRequest("@Official_LegendBot"))
+        await legend(JoinChannelRequest("@heartbeatbo"))
     except BaseException:
         pass
     try:
-        await legend(JoinChannelRequest("@Official_LegendBot"))
+        await legend(JoinChannelRequest("@heartbeatbo"))
     except BaseException:
         pass
 
