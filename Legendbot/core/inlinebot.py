@@ -91,7 +91,7 @@ def main_menu():
         ],
         [
             custom.Button.inline("⚜ Alive ⚜", data="stats"),
-            Button.url("Support 🇮🇳", "https://t.me/Official_LegendBot"),
+            Button.url("Support 🇮🇳", "https://t.me/heartbeatbo"),
         ],
         [custom.Button.inline("❌", data="clise")],
     ]
@@ -280,8 +280,8 @@ async def inline_handler(event):  # sourcery no-metrics
                 )
             await event.answer([result] if result else None)
         if query.startswith("**⚜ LegendBot"):
-            grp_username = gvarstatus("GROUP_USERNAME") or "Official_LegendBot"
-            chnl_username = gvarstatus("CHANNEL_USERNAME") or "Official_LegendBot"
+            grp_username = gvarstatus("GROUP_USERNAME") or "Devilxdy"
+            chnl_username = gvarstatus("CHANNEL_USERNAME") or "Devilxdy"
             buttons = [
                 (Button.url(f"{ALIVE_NAME}", f"tg://openmessage?user_id={USERID}"),),
                 (
@@ -692,7 +692,7 @@ async def inline_handler(event):  # sourcery no-metrics
                 id=str(uuid4()),
                 type="photo",
                 title=f"Lêɠêɳ̃dẞø†",
-                description=f"Lêɠêɳ̃dẞø†\nhttps://t.me/Official_LegendBot",
+                description=f"Lêɠêɳ̃dẞø†\nhttps://t.me/heartbeatbo",
                 url="https://github.com/Tecosys/LEGENDBOT",
                 thumb=photo,
                 content=photo,
@@ -710,7 +710,7 @@ async def on_plug_in_callback_query_handler(event):
         (Button.inline("Re-Open Menu", data="mainmenu"),),
     ]
     await event.edit(
-        f"📜 Menu Provider Has Been Closed\n\n🔰 Bot Of : {mention}\n\n             [©️Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot)",
+        f"📜 Menu Provider Has Been Closed\n\n🔰 Bot Of : {mention}\n\n             [©️Lêɠêɳ̃dẞø†](https://t.me/heartbeatbo)",
         buttons=buttons,
         link_preview=False,
     )
