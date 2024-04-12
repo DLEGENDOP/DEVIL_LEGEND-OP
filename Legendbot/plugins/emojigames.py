@@ -81,7 +81,7 @@ async def _(event):
     await event.delete()
     if emoticon == "dice":
         emoticon = "🎲"
-    r = await reply_message.reply(file=InputMediaDice(emoticon=emoticon))
+    r = await event.client.send_message(chatt_id, file=InputMediaDice(emoticon=emoticon))
     if input_str:
         try:
             required_number = int(input_str)
