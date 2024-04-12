@@ -1,6 +1,6 @@
 # imported from uniborg credit goes to spechide
 from telethon.tl.types import InputMediaDice
-
+from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from . import legend
 
 menu_category = "fun"
@@ -73,15 +73,12 @@ async def _(event):
     reply_message = event
     if event.reply_to_msg_id:
         reply_message = await event.get_reply_message()
-    emoticon = "dice"
-    emoticon = "🎲"
-    old_str = "".join(event.text.split(maxsplit=1)[1:])
-    input_str = int(old_str.split(" ", 2)[0])
-    chatt_id = int(old_str.split(" ", 2)[1])
+    emoticon = event.pattern_match.group(1)
+    input_str = gvarstatus("DICE_NO")
     await event.delete()
     if emoticon == "dice":
         emoticon = "🎲"
-    r = await event.client.send_message(chatt_id, file=InputMediaDice(emoticon=emoticon))
+    r = await reply_message.reply(file=InputMediaDice(emoticon=emoticon))
     if input_str:
         try:
             required_number = int(input_str)
@@ -91,9 +88,9 @@ async def _(event):
         except BaseException:
             pass
     elif event.sender_id == event.client.uid:
-        await event.client.send_message(chatt_id, file=InputMediaDice(emoticon=emoticon))
+        await event.edit(file=InputMediaDice(emoticon=emoticon))
     else:
-        await event.client.send_message(chatt_id, file=InputMediaDice(emoticon=emoticon))
+        await event.reply(file=InputMediaDice(emoticon=emoticon))
 
 
 @legend.legend_cmd(
