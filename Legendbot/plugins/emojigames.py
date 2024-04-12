@@ -55,7 +55,7 @@ async def _(event):
 
 
 @legend.legend_cmd(
-    pattern=f"({DICE_E_MOJI}|dice)(?:\s|$)([\s\S]*)",
+    pattern=f"({DICE_E_MOJI}|dice)",
     command=("dice", menu_category),
     info={
         "header": "To get specific dice animation.",
