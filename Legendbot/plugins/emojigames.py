@@ -75,6 +75,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
     emoticon = event.pattern_match.group(1)
     input_str = event.pattern_match.group(2)
+    chatt_id = event.pattern_match.group(3)
     await event.delete()
     if emoticon == "dice":
         emoticon = "🎲"
@@ -88,9 +89,9 @@ async def _(event):
         except BaseException:
             pass
     elif event.sender_id == event.client.uid:
-        await event.edit(file=InputMediaDice(emoticon=emoticon))
+        await event.client.send_message(chatt_id, file=InputMediaDice(emoticon=emoticon))
     else:
-        await event.reply(file=InputMediaDice(emoticon=emoticon))
+        await event.client.send_message(chatt_id, file=InputMediaDice(emoticon=emoticon))
 
 
 @legend.legend_cmd(
