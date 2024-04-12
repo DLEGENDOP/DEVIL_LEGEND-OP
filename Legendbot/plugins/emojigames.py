@@ -73,6 +73,7 @@ async def _(event):
     reply_message = event
     if event.reply_to_msg_id:
         reply_message = await event.get_reply_message()
+    emoticon == "🎲"
     old_str = "".join(event.text.split(maxsplit=1)[1:])
     input_str = int(old_str.split(" ", 2)[0])
     chatt_id = int(old_str.split(" ", 2)[1])
