@@ -10,40 +10,40 @@ dataclasses
 DateTime 
 emoji==1.7.0 
 fonttools 
- geopy 
- gitpython 
- glitch_this 
- google-api-python-client 
- google-auth-httplib2 
- google-auth-oauthlib 
- gtts 
- hachoir 
- heroku3 
- html-telegraph-poster 
- httpx[http2] 
- humanize 
- IMDbPY 
- jikanpy 
- justwatch 
- lottie 
- lyricsgenius 
- markdown 
- markdown-it-py 
- motor 
- moviepy 
- nekos.py 
- opencv-python-headless 
- Pillow 
- prettytable 
- psutil 
- psycopg2 
- pyfiglet 
- PyGithub 
- pygments 
- pylast 
- pymediainfo 
- PyMuPDF 
- pySmartDL 
+geopy 
+gitpython 
+glitch_this 
+google-api-python-client 
+google-auth-httplib2 
+google-auth-oauthlib 
+gtts 
+hachoir 
+heroku3 
+html-telegraph-poster 
+httpx[http2] 
+humanize 
+IMDbPY 
+jikanpy 
+justwatch 
+lottie 
+lyricsgenius 
+markdown 
+markdown-it-py 
+motor 
+moviepy 
+nekos.py 
+opencv-python-headless 
+Pillow 
+prettytable 
+psutil 
+psycopg2 
+pyfiglet 
+PyGithub 
+pygments 
+pylast 
+pymediainfo 
+PyMuPDF 
+pySmartDL 
 python-barcode 
 python-dotenv 
 pytz 
